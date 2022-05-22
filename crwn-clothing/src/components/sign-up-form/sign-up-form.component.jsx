@@ -11,7 +11,7 @@ import {
   signInAuthUserWithEmailAndPassword,
 } from "../../utils/firebase/firebase.utils";
 
-import "./sign-up-form.styles.scss";
+import { SignUpContainer } from "./sign-up-form.styles.jsx";
 
 const defaultFormFields = {
   displayName: "",
@@ -60,7 +60,7 @@ const SignUpForm = () => {
   };
 
   return (
-    <div className="sign-up-container">
+    <SignUpContainer>
       <h1>Sign up with your email and password</h1>
       <form onSubmit={handleSubmit}>
         <FormInput
@@ -96,7 +96,7 @@ const SignUpForm = () => {
         />
         <Button type="submit">Sign Up</Button>
       </form>
-    </div>
+    </SignUpContainer>
   );
 };
 
